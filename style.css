@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 18, 43, 0.801);
+  color: white;
+}
+
+.imageGalleryPara {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#paraDiv {
+  height: 100px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 12px;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+#imagesDiv {
+  height: auto;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+#links_Div {
+  height: 50px;
+  background-color: white;
+}
+
+aside {
+  width: 50px;
+  height: 100vh;
+  float: left;
+  background-color: white;
+}
+
+#links_Div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+#saveLink a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#saveLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#arrowDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-left: 0.5px solid black;
+  border-right: 0.5px solid black;
+  padding: 0px 15px 0px 15px;
+}
+
+.left-arrow {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.right-arrow {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+select {
+  border: none;
+}
+
+option:active {
+  border: none;
+}
+
+#otherLinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+#settingIcon p {
+  font-size: 1.5rem;
+}
+
+#placeText {
+  font-size: 1.5rem;
+}
+
+#themePara {
+  color: black;
+}
+
+#themeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+#toolsDiv {
+  border-left: 0.5px solid black;
+  border-right: 0.5px solid black;
+  padding: 0px 15px 0px 15px;
+  height: 50px;
+  line-height: 50px;
+}
+
+#placeDiv {
+  height: 50px;
+  line-height: 50px;
+}
+
+#themeIcon p {
+  cursor: pointer;
+}
+
+#themePara {
+  font-size: 1.2rem;
+}
