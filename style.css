@@ -96,8 +96,16 @@ main {
 }
 
 .uploadPara {
-  font-weight: 600;
   font-size: 14px;
+}
+
+#uploadImage:hover {
+  cursor: pointer;
+}
+
+#uploadImage {
+  border: 3px solid #023047;
+  border-radius: 10px;
 }
 @media (max-width: 376px) {
   .imagesDiv img {
