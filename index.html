@@ -3,71 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Image Gallery</title>
+    <title>Image Gallery Project</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/gallery.png" type="image/png" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <aside>
-      <div id="asideDiv"></div>
-    </aside>
     <header>
-      <div id="links_Div">
-        <div id="saveLink">
-          <a href="">
-            <p class="rightSymbol">✓</p>
-          </a>
-          <a href="#">
-            <p>Save</p>
-          </a>
-          <div id="arrowDiv">
-            <a href="" class="left-arrow">←</a>
-            <a href="" class="right-arrow">→</a>
-          </div>
-        </div>
-        <div id="otherLinks">
-          <div id="toolsDiv">
-            <select name="" id="">
-              <option value="" selected>Tools</option>
-              <option value="">A</option>
-              <option value="">A</option>
-              <option value="">A</option>
-            </select>
-          </div>
-          <div id="placeDiv">
-            <select name="" id="">
-              <option value="" selected id="placeOption">
-                <p id="settingIcon">⚙</p>
-                <p id="placeText">Place</p>
-              </option>
-              <option value="">A</option>
-              <option value="">A</option>
-              <option value="">A</option>
-            </select>
-          </div>
-          <div id="themeIcon">
-            <p>🌙</p>
-            <p id="themePara">Theme</p>
-          </div>
-        </div>
-      </div>
-      <div id="paraDiv">
-        <p class="imageGalleryPara">Simple Image Gallery</p>
+      <div id="webName">
+        <h1>Simple Image Gallery</h1>
       </div>
     </header>
     <main>
-      <div id="imagesDiv">
-        <div id="imgDiv"><img src="images/eduardo.jpg" alt="" srcset="" /></div>
-        <div id="imgDiv"><img src="images/jeremy.jpg" alt="" srcset="" /></div>
-        <div id="imgDiv">
-          <img src="images/jonathan.jpg" alt="" srcset="" />
+      <div id="mainContainer">
+        <!-- Less Than Arrow -->
+        <div id="lessThanArrow">
+          <p><</p>
         </div>
-        <div id="imgDiv"><img src="images/mikhail.jpg" alt="" srcset="" /></div>
-        <div id="imgDiv">
-          <img src="images/randi-wilson.jpg" alt="" srcset="" />
+
+        <!-- Images Div -->
+        <!-- Image - 1 -->
+        <div id="image1" class="imagesDiv">
+          <img
+            src="images/eduardo.jpg"
+            alt=""
+            id="imageDisplayEl"
+            class="eduardoImage" />
         </div>
-        <div id="imgDiv">
-          <img src="images/vincent-dorig.jpg" alt="" srcset="" />
+        <div id="greaterThanArrow">
+          <p id="rightKey">></p>
         </div>
       </div>
     </main>
