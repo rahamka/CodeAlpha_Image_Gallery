@@ -1,53 +1,43 @@
-let imageDisplayEl = document.getElementById("imageDisplayEl");
-let imgAttribute = imageDisplayEl.getAttribute("src");
+// 1. Store all your image paths in a single Array (Data Structure)
+const images = [
+  "images/eduardo.jpg",
+  "images/jeremy.jpg",
+  "images/jonathan.jpg",
+  "images/mikhail.jpg",
+  "images/randi-wilson.jpg",
+  "images/vincent-dorig.jpg"
+];
 
-// Right Key
+// 2. Keep track of the current position (State)
+let currentIndex = 0;
+
+let imageDisplayEl = document.getElementById("imageDisplayEl");
 let rightKey = document.getElementById("rightKey");
+let leftKey = document.getElementById("lessThanArrow");
+
+// Helper function to update the UI
+function updateImage() {
+  imageDisplayEl.setAttribute("src", images[currentIndex]);
+}
+
+// 3. Right Key (Moving Forward)
 rightKey.addEventListener("click", () => {
-  if (imgAttribute == "images/eduardo.jpg") {
-    {
-      imgAttribute = "images/jeremy.jpg";
-      imageDisplayEl.setAttribute("src", "images/jeremy.jpg");
-    }
-  } else if (imgAttribute == "images/jeremy.jpg") {
-    imgAttribute = "images/jonathan.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/jonathan.jpg") {
-    imgAttribute = "images/mikhail.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/mikhail.jpg") {
-    imgAttribute = "images/randi-wilson.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/randi-wilson.jpg") {
-    imgAttribute = "images/vincent-dorig.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/vincent-dorig.jpg") {
-    imgAttribute = "images/eduardo.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
+  currentIndex++; // Increment index
+  
+  // If we go past the last image, go back to the start (Looping)
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
   }
+  updateImage();
 });
 
-// Left Key
-let leftKey = document.getElementById("lessThanArrow");
+// 4. Left Key (Moving Backward)
 leftKey.addEventListener("click", () => {
-  // In decending Order
-  if (imgAttribute == "images/eduardo.jpg") {
-    imgAttribute = "images/vincent-dorig.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/vincent-dorig.jpg") {
-    imgAttribute = "images/randi-wilson.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/randi-wilson.jpg") {
-    imgAttribute = "images/mikhail.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/mikhail.jpg") {
-    imgAttribute = "images/jonathan.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/jonathan.jpg") {
-    imgAttribute = "images/jeremy.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
-  } else if (imgAttribute == "images/jeremy.jpg") {
-    imgAttribute = "images/eduardo.jpg";
-    imageDisplayEl.setAttribute("src", imgAttribute);
+  currentIndex--; // Decrement index
+  
+  // If we go before the first image, go to the last one
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
   }
+  updateImage();
 });
